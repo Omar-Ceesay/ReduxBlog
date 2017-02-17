@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router';
 //import {bindActionCreators} from 'redux';
 
 import {fetchPosts} from '../actions/index';
@@ -11,6 +12,9 @@ class PostsIndex extends Component{
   render(){
     return(
       <div>
+        <div className="container">
+          <Link to='/posts/new' className="btn btn-primary pull-right">Add a post</Link>
+        </div>
         What's up
       </div>
     )
@@ -22,4 +26,4 @@ class PostsIndex extends Component{
 // }
 
 export default connect(null, {fetchPosts: fetchPosts})(PostsIndex);
-//connect(passToState, passToProps)
+//connect(passToState, passToProps)(passToWho?)
