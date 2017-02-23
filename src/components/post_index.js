@@ -26,4 +26,4 @@ class PostsIndex extends Component{
 // }
 
 export default connect(null, {fetchPosts: fetchPosts})(PostsIndex);
-//connect(passToState, passToProps)(passToWho?)
+//connect(passToState, passToProps)(passToWho)
